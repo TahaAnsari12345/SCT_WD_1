@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholars</title>
+    <style>
+        /* General reset for padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#home {
+    background-image: url('home image.webp'); /* Replace with the actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; /* Adjust as needed */
+}
+#about {
+    background-image: url('about page.webp'); /* Replace with the actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333; /* Adjust for readability */
+}
+#services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('our service.webp');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+#about {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('about us.webp');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.section {
+    padding: 100px 20px;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Fixed Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Sticky navbar: Change color when scrolling */
+.sticky {
+    background-color: #555;
+}
+
+.sticky ul li a:hover {
+    color: #00FF7F; /* Light green color on hover */
+}
+
+/* Section styles */
+#home {
+    background-color: #f4f4f4;
+}
+
+#services {
+    background-color: #ddd;
+}
+
+#about {
+    background-color: #f4f4f4;
+}
+
+#contact {
+    background-color: #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Page Content -->
+    <section id="home" class="section">
+        <h1>Unlock Your Potential with Scholars...</h1>
+        <p>Empowering learners worldwide with top-notch courses and personalized education paths.</p>
+    </section>
+    
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <p> Service 1: Web Development - "We create responsive and high-performance websites tailored to your business needs."<br>
+            Service 2: Data Analytics - "Leverage your data to make informed decisions with our advanced analytics solutions."<br>
+            Service 3: Mobile App Development - "We build user-friendly mobile applications that enhance your customer engagement."</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>"At Scholars , we are committed to delivering cutting-edge solutions to help fresher programmers in the digital age.<br> With over 30  years of experience, our team of experts works tirelessly to meet the unique needs of each client."</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: support@Scholars.com <br>
+            Phone: +1 (123) 456-7890   <br>
+            Address: 123 thane west ,mumbai 400612</p>
+    </section>
+
+    <script >// Get the navbar
+        const navbar = document.getElementById("navbar");
+        
+        // Get the offset position of the navbar
+        const sticky = navbar.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        window.onscroll = function() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        };
+        </script>
+</body>
+</html>
